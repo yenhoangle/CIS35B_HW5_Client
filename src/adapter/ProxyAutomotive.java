@@ -26,7 +26,7 @@ public abstract class ProxyAutomotive {
         return at1;
     }
 
-    //implements CreateAuto interface methods via subclass BuildAuto
+    //implements CreateAuto interface methods via subclass BuildAuto---------------------------
     public void buildAuto(String filename) throws AutoException {
         FileIO fileIO = new FileIO();
         Automotive toBuild = fileIO.buildAutoObject(filename);
@@ -37,7 +37,7 @@ public abstract class ProxyAutomotive {
         at1.getVehicle(modelName).print();
     }
 
-    //UpdateAuto interface methods via subclass BuildAuto
+    //UpdateAuto interface methods via subclass BuildAuto------------------------------------------
     public synchronized void updateOptionSetName(String key, String opsetName, String newOpsetName) {
         at1.getVehicle(key).updateOpsetName(opsetName, newOpsetName);
     }
@@ -51,7 +51,7 @@ public abstract class ProxyAutomotive {
         //implementation already included in fileIO
     }
 
-    //implements ConfigureAuto interface methods
+    //implements ConfigureAuto interface via BuildAuto methods--------------------------------------
     public void selectChoices(String key) {
         Automotive selectAuto = at1.getVehicle(key);
         System.out.println("\nSelecting options for: " + selectAuto.getName());
