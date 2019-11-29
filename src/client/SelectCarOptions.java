@@ -20,18 +20,18 @@ public class SelectCarOptions {
 
     }
 
-    public boolean isAutomobile(Object obj) {
-        boolean isAutomobile = false;
+    public boolean isAutomotive(Object obj) {
+        boolean isAutomotive = false;
 
         try {
             Automotive a1 = (Automotive) obj;
-            isAutomobile = true;
+            isAutomotive = true;
         }
         catch (ClassCastException e) {
-            isAutomobile = false;
+            isAutomotive = false;
         }
 
-        return isAutomobile;
+        return isAutomotive;
     }
 
 }

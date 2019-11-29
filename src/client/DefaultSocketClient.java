@@ -59,7 +59,7 @@ public class DefaultSocketClient extends Thread {
                     System.out.println("Received server response ... ");
                 System.out.println(fromServer.toString());
 
-                if (clientProtocol.isAutomobile(fromServer))
+                if (clientProtocol.isAutomotive(fromServer))
                     clientProtocol.configureAuto(fromServer);
 
                 System.out.println("Response to server: ");
