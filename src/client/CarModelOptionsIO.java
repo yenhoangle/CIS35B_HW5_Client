@@ -18,6 +18,7 @@ public class CarModelOptionsIO {
     ////////// INSTANCE METHODS //////////
 
     public Object loadPropsFile(String fname) {
+        //String fpath = "C:\\Users\\Arteh\\IdeaProjects\\CIS35B_HW5_Client\\textfiles\\";
         Properties props = new Properties();
         try {
             props.load(new FileInputStream(fname));

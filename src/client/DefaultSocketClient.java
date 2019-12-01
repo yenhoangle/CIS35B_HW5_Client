@@ -15,7 +15,7 @@ public class DefaultSocketClient extends Thread {
     private int iPort;
     private CarModelOptionsIO clientFTP;
     private SelectCarOptions clientProtocol;
-    private boolean DEBUG = false;
+    private boolean DEBUG = true;
 
     ////////// CONSTRUCTORS //////////
 
