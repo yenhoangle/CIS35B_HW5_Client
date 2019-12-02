@@ -29,7 +29,7 @@ public class SelectCarOptions {
         }
 
         auto.selectChoices();
-        auto.printChoices();
+        auto.getTotalPrice();
         //added
         if (DEBUG) {
             System.out.println("Done Configuring Auto");
