@@ -1,5 +1,6 @@
 package client;
 
+import adapter.BuildAuto;
 import model.*;
 import java.util.*;
 
@@ -17,6 +18,12 @@ public class SelectCarOptions {
     ////////// INSTANCE METHODS //////////
 
     public void configureAuto(Object obj) {
+        Automotive auto;
+        BuildAuto builtAuto = new BuildAuto();
+        if (isAutomotive(obj)) {
+            auto = (Automotive) obj;
+            builtAuto.selectChoices(auto.getName());
+        }
 
     }
 
