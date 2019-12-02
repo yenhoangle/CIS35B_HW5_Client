@@ -59,8 +59,11 @@ public class DefaultSocketClient extends Thread {
                     System.out.println("Received server response ... ");
                 System.out.println(fromServer.toString());
 
-                if (clientProtocol.isAutomotive(fromServer))
+                if (clientProtocol.isAutomotive(fromServer)) {
+                    if (DEBUG)
+                        System.out.println("Received the Auto requested from Server... ");
                     clientProtocol.configureAuto(fromServer);
+                }
 
                 System.out.println("Response to server: ");
                 toServer = stdIn.readLine();
@@ -87,6 +90,10 @@ public class DefaultSocketClient extends Thread {
         }
         catch (ClassNotFoundException e) {
             System.err.println("Error in downloaded object, object may be corrupted ... ");
+            System.exit(1);
+        }
+        catch (InvalidClassException ice) {
+            System.err.println(("Error in Deserialization"));
             System.exit(1);
         }
         catch (IOException e) {
