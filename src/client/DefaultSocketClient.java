@@ -3,6 +3,8 @@ package client;
 import java.net.*;
 import java.io.*;
 
+import static com.sun.corba.se.impl.util.Utility.printStackTrace;
+
 public class DefaultSocketClient extends Thread {
 
     ////////// PROPERTIES //////////

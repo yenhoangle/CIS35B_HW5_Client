@@ -19,15 +19,17 @@ public class SelectCarOptions {
     ////////// INSTANCE METHODS //////////
 
     public void configureAuto(Object obj) {
-        //added
-        if (DEBUG) {
-            System.out.println("Configuring Auto");
-        }
         Automotive auto;
-        BuildAuto builtAuto = new BuildAuto();
         auto = (Automotive) obj;
-        builtAuto.selectChoices(auto.getName());
-        builtAuto.printChoices(auto.getName());
+        //added
+
+        if (DEBUG) {
+            System.out.println("Configuring Auto: " + auto.getName());
+            auto.print();
+        }
+
+        auto.selectChoices();
+        auto.printChoices();
         //added
         if (DEBUG) {
             System.out.println("Done Configuring Auto");
